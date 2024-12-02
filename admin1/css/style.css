@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* sidebar trang admin */
+:root {
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-infor-dark: #7d8dal;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-varilant: #677483;
+    --color-background: #f6f6f9;
+
+    --cart-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --cart-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    /* vh là chiều cao cửa số trình duyệt, vw là chiều rộng, 1rem = 16px*/
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+a {
+    color: var(--color-dark);
+
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+small {
+    font-size: 0.76rem;
+}
+
+p {
+    color: var(--color-infor-dark);
+}
+
+b {
+    color: var(--color-dark);
+}
+
+.text-muted {
+    color: var(--color-infor-dark)
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+.container {
+    display: flex;
+    width: auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+}
+
+aside {
+    height: 90vh;
+    width: 350px;
+}
+
+aside .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .toggle .logo {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+aside .toggle .logo img {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+aside .toggle .close {
+    padding-right: 1rem;
+    display: none;
+
+}
+
+/* css sidebar */
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    height: 88vh;
+    position: relative;
+    top: 1.5rem;
+    transition: all 0.3s ease;
+    width:350px;
+
+}
+
+aside .sidebar:hover {
+    box-shadow: none;
+}
+
+aside .sidebar a,
+.menu-title {
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    padding: 0 2rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a span,
+.menu-title h3 {
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active {
+    width: 100%;
+    background-color: var(--color-light);
+    margin: 0;
+}
+
+aside .sidebar a.active::before {
+    content: ' ';
+    width: 6px;
+    height: 18px;
+    background-color: var(--color-primary);
+}
+
+aside .sidebar a.active span {
+    color: var(--color-primary);
+    margin-left: calc(1rem-3px);
+}
+
+aside .sidebar a:hover,
+.menu-title:hover {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+aside .sidebar a:hover span,
+.menu-title:hover h3 {
+    margin-left: 0.6rem;
+}
+
+aside .sidebar .message-count {
+    background-color: var(--color-danger);
+    padding: var(--color-white);
+    font-size: 15px;
+    border-radius: var(--border-radius-1);
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    position: revert-layer;
+}
+
+.quanlymenuchung {
+    padding-top: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* margin-left: 20%; */
+}
+
+.thêm_menu {
+    background: whitesmoke;
+    width: -webkit-fill-available;
+    height: 50px;
+}
+
+.thêm_menu td {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.thêm_menu input {
+    width: 98%;
+
+}
+
+.thêm_menu th {
+   
+    width: 109px;
+}
+.them_menu2 input{
+    font-size: inherit;
+}
+.btn_thêm_menu{
+    text-align: center;
+    height: 40px;
+   
+}
+.btn_thêm_menu input{
+    width: 150px;
+    height: 42px;
+    border: 1px solid;
+    background-color: black;
+    color: white;
+}
+
+/* thêm size */
+
+.them_size{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* thêm số lượng */
+.them_so_luong{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* liệt kê menu */
+.lietke_menu td{
+    border: 1px solid black;
+    padding: 4px;
+    text-align: center;
+}
+.lietke_menu a{
+    text-decoration: none;
+    background-color: black;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+.lietke_menu{
+    width: 700px;
+    text-align: center;
+}
+.quanlymenuchung h3{
+    text-align: center;
+    margin:10px;
+}
+
+
+/* css quản lý sản phẩm */
+.lietkesp {
+    width: 100%;
+    height: auto;
+
+}
+
+.header_lietke {
+    background-color: #ccc;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: ui-sans-serif;
+}
+
+/* css danh mục trong sidebar */
+.dmsidebar {
+    margin-left: 80px;
+    display: none;
+}
+
+/* css  menu*/
+.menu-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.menu-title {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.menu-title h3 :hover {
+    background-color: #ccc;
+    color: var(--color-primary);
+}
+
+.menu-title h3,
+.sidebar a h3 {
+    margin: 0 10px;
+    flex-grow: 1;
+    font-size: 17px;
+}
+
+.menu-title .material-icons-sharp span {
+    font-size: 17px;
+}
+
+/* Hover Menu Styles */
+.hover-menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 350px;
+    height: 150px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.menu-item:hover .hover-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(1px);
+}
+
+.hover-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: var(--color-info-dark);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.hover-item:hover {
+    color: var(--color-primary);
+}
+
+.hover-item .material-icons-sharp {
+    margin-right: 10px;
+    font-size: 20px !important;
+}
+
+.hover-item span {
+    font-size: 15px;
+}
+
+/* Animation for menu title
+.menu-item:hover .menu-title {
+    background: #f0f0f0;
+} */
+
+.menu-item:hover .menu-title .material-icons-sharp:last-child {
+    transform: rotate(90deg);
+}
+
+/* Smooth transitions */
+.menu-title,
+.hover-menu,
+.hover-item {
+    transition: all 0.3s ease;
+}
+
+/* Active state */
+.menu-item.active .menu-title {
+    background: #e0e0e0;
+}
+
+/* Optional: Add some nice effects */
+.hover-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #007bff;
+    transition: width 0.3s ease;
+}
+
+.hover-item:hover::after {
+    width: 100%;
+}
+
+
+
+/* trang admin */
+.hien_thi {
+    margin-top: 70px;
+    margin-left: 100px;
+    text-align: center;
+
+}
+
+/* quản lý menu */
+.quanly_menu {
+    text-align: center;
+    width: 850px;
+    margin-top: 90px;
+}
+
+/* chính sách */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 20px;
+}
+
+.quanlymenu {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border:2px solid;
+}
+tr{
+    border:1px solid;  
+}
+th{
+    border:1px solid;
+    padding:10px;
+}
+td {
+    padding: 15px;
+    border: 1px solid;
+}
+
+.qlchinhsach1 {
+    text-align: right;
+    font-weight: bold;
+    color: #555;
+}
+
+.qlchinhsach2 {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.qlchinhsach3 {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 19px;
+    transition: background-color 0.3s;
+    width: auto;
+    height: auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* sửa thành viên  */
+
+.sua_thanh_viên{
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 50pc;
+    font-size: 25px;
+}
+.sua_thanh_viên h3{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+}
+.thongtin{
+    text-align: justify;
+
+}
+.thongtin input{
+    font-size: 25px;
+    width: -webkit-fill-available;
+}
+.thongtin_role{
+    font-size: 25px;
+    margin-right: 300px;
+}
+
+/* thêm thành viên */
+.them_thanh_vien{
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 50pc;
+    font-size: 25px;
+}
+.them_thanh_vien h3{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+}
+.them_thanh_vien_role{
+    font-size: 25px;
+    margin-right: 150px;
+}
+
+.sửa_liên_hệ{
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 50pc;
+    font-size: 25px;
+}
