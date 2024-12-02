@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: url(admin1/img/Banner_Website_d70ea16b-a63a-4732-8cbc-f3f4b43614b7_1400x.jpg);
+    background-position: center;
+}
+
+.login-container {
+    width: 400px;
+    
+    height: 80vh;
+    ;
+}
+
+.login-form {
+    width: 600px;
+    padding: 40px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-wrapper {
+    margin-bottom: 10px;
+}
+
+.logo-wrapper img {
+    width: 250px;
+    height: auto;
+}
+
+.login-form h2 {
+    margin-bottom: 60px;
+    color: black;
+}
+
+.login-form input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+}
+
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid skyblue;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login-form button:hover {
+    background-color: white;
+    color: black;
+}
+
+.login-form .links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login-form .links a {
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+}
